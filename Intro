@@ -1,0 +1,61 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("ImageLabel")
+local Frame_2 = Instance.new("ImageLabel")
+local TItleIntro = Instance.new("TextLabel")
+local WelcomeText = Instance.new("TextLabel")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+Frame.Name = "Frame"
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame.BackgroundTransparency = 1.000
+Frame.Position = UDim2.new(0.384900987, 0, 0.351351351, 0)
+Frame.Size = UDim2.new(0, 372, 0, 241)
+Frame.Image = "rbxassetid://3570695787"
+Frame.ImageColor3 = Color3.fromRGB(24, 24, 24)
+Frame.ScaleType = Enum.ScaleType.Slice
+Frame.SliceCenter = Rect.new(100, 100, 100, 100)
+Frame.SliceScale = 0.120
+
+Frame_2.Name = "Frame"
+Frame_2.Parent = Frame
+Frame_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame_2.BackgroundTransparency = 1.000
+Frame_2.Size = UDim2.new(0, 372, 0, 75)
+Frame_2.Image = "rbxassetid://3570695787"
+Frame_2.ImageColor3 = Color3.fromRGB(14, 14, 14)
+Frame_2.ScaleType = Enum.ScaleType.Slice
+Frame_2.SliceCenter = Rect.new(100, 100, 100, 100)
+Frame_2.SliceScale = 0.120
+
+TItleIntro.Archivable = false
+TItleIntro.Name = "TItleIntro"
+TItleIntro.Parent = Frame_2
+TItleIntro.BackgroundColor3 = Color3.fromRGB(14, 14, 14)
+TItleIntro.BorderColor3 = Color3.fromRGB(14, 14, 14)
+TItleIntro.Position = UDim2.new(0.231182799, 0, 0.159999996, 0)
+TItleIntro.Size = UDim2.new(0, 200, 0, 50)
+TItleIntro.Font = Enum.Font.SourceSans
+TItleIntro.Text = "Alpha BSS"
+TItleIntro.TextColor3 = Color3.fromRGB(255, 255, 255)
+TItleIntro.TextSize = 35.000
+
+WelcomeText.Name = "WelcomeText"
+WelcomeText.Parent = Frame_2
+WelcomeText.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
+WelcomeText.BorderColor3 = Color3.fromRGB(24, 24, 24)
+WelcomeText.Position = UDim2.new(0.0456989259, 0, 1.60000002, 0)
+WelcomeText.Size = UDim2.new(0, 337, 0, 50)
+WelcomeText.Font = Enum.Font.SourceSans
+WelcomeText.Text = "Welcome "
+WelcomeText.TextColor3 = Color3.fromRGB(255, 255, 255)
+WelcomeText.TextSize = 32.000
+WelcomeText.TextWrapped = true
