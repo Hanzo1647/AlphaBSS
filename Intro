@@ -3,42 +3,45 @@
 
 -- Instances:
 
-local ScreenGui = Instance.new("ScreenGui")
-local Frame = Instance.new("ImageLabel")
-local Frame_2 = Instance.new("ImageLabel")
+local Intro = Instance.new("ScreenGui")
+local TweenService = game:GetService("TweenService")
+local CoreGui = game:GetService("CoreGui")
+local Background = Instance.new("ImageLabel")
+local TitleHeader = Instance.new("ImageLabel")
 local TItleIntro = Instance.new("TextLabel")
 local WelcomeText = Instance.new("TextLabel")
 
 --Properties:
 
-ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+Intro.Name = "Intro"
+Intro.Parent = game.CoreGui
 
-Frame.Name = "Frame"
-Frame.Parent = ScreenGui
-Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Frame.BackgroundTransparency = 1.000
-Frame.Position = UDim2.new(0.384900987, 0, 0.351351351, 0)
-Frame.Size = UDim2.new(0, 372, 0, 241)
-Frame.Image = "rbxassetid://3570695787"
-Frame.ImageColor3 = Color3.fromRGB(24, 24, 24)
-Frame.ScaleType = Enum.ScaleType.Slice
-Frame.SliceCenter = Rect.new(100, 100, 100, 100)
-Frame.SliceScale = 0.120
+Background.Name = "Background"
+Background.Parent = Intro
+Background.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Background.BackgroundTransparency = 1.000
+Background.Position = UDim2.new(0.384900987, 0, 0.351351351, 0)
+Background.Size = UDim2.new(0, 372, 0, 241)
+Background.Image = "rbxassetid://3570695787"
+Background.ImageColor3 = Color3.fromRGB(24, 24, 24)
+Background.ScaleType = Enum.ScaleType.Slice
+Background.SliceCenter = Rect.new(100, 100, 100, 100)
+Background.SliceScale = 0.120
 
-Frame_2.Name = "Frame"
-Frame_2.Parent = Frame
-Frame_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Frame_2.BackgroundTransparency = 1.000
-Frame_2.Size = UDim2.new(0, 372, 0, 75)
-Frame_2.Image = "rbxassetid://3570695787"
-Frame_2.ImageColor3 = Color3.fromRGB(14, 14, 14)
-Frame_2.ScaleType = Enum.ScaleType.Slice
-Frame_2.SliceCenter = Rect.new(100, 100, 100, 100)
-Frame_2.SliceScale = 0.120
+TitleHeader.Name = "Title Header"
+TitleHeader.Parent = Background
+TitleHeader.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TitleHeader.BackgroundTransparency = 1.000
+TitleHeader.Size = UDim2.new(0, 372, 0, 75)
+TitleHeader.Image = "rbxassetid://3570695787"
+TitleHeader.ImageColor3 = Color3.fromRGB(14, 14, 14)
+TitleHeader.ScaleType = Enum.ScaleType.Slice
+TitleHeader.SliceCenter = Rect.new(100, 100, 100, 100)
+TitleHeader.SliceScale = 0.120
 
 TItleIntro.Archivable = false
 TItleIntro.Name = "TItleIntro"
-TItleIntro.Parent = Frame_2
+TItleIntro.Parent = TitleHeader
 TItleIntro.BackgroundColor3 = Color3.fromRGB(14, 14, 14)
 TItleIntro.BorderColor3 = Color3.fromRGB(14, 14, 14)
 TItleIntro.Position = UDim2.new(0.231182799, 0, 0.159999996, 0)
@@ -49,7 +52,7 @@ TItleIntro.TextColor3 = Color3.fromRGB(255, 255, 255)
 TItleIntro.TextSize = 35.000
 
 WelcomeText.Name = "WelcomeText"
-WelcomeText.Parent = Frame_2
+WelcomeText.Parent = TitleHeader
 WelcomeText.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
 WelcomeText.BorderColor3 = Color3.fromRGB(24, 24, 24)
 WelcomeText.Position = UDim2.new(0.0456989259, 0, 1.60000002, 0)
@@ -59,3 +62,7 @@ WelcomeText.Text = "Welcome "
 WelcomeText.TextColor3 = Color3.fromRGB(255, 255, 255)
 WelcomeText.TextSize = 32.000
 WelcomeText.TextWrapped = true
+
+wait(7)
+
+Intro:Destroy()
